@@ -1,10 +1,7 @@
-import './app.scss'
-import buildButton from '../components/button/button';
+import './app.scss';
 
 export default class App {
-
-  run() {
-    const { body } = document
-    body.append(buildButton())
+  static run() {
+    const { body } = document;
   }
 }

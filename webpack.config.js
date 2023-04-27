@@ -1,13 +1,12 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env) => {
-  const mode = env.mode || 'development'
-  const isDev = mode === 'development'
-  const PORT = env.port || 3000
+  const mode = env.mode || 'development';
+  const isDev = mode === 'development';
+  const PORT = env.port || 3000;
 
   return {
     mode,
@@ -17,7 +16,7 @@ module.exports = (env) => {
       filename: '[name].[contenthash].js',
       path: path.resolve(__dirname, 'dist'),
       assetModuleFilename: 'assets/[name][ext]',
-      clean: true
+      clean: true,
     },
 
     plugins: [
@@ -27,8 +26,8 @@ module.exports = (env) => {
       }),
       new webpack.ProgressPlugin(),
       new MiniCssExtractPlugin({
-        filename: 'css/[name].[contenthash:8].css'
-      })
+        filename: 'css/[name].[contenthash:8].css',
+      }),
     ],
 
     module: {
@@ -46,20 +45,20 @@ module.exports = (env) => {
                     ? '[path][name]__[local]-[hash:base64:5]'
                     : '[hash:base64:8]',
                 },
-              }
+              },
             },
-            'sass-loader'
-          ]
+            'sass-loader',
+          ],
         },
         {
           test: /\.(png|jpe?g|gif|ico)$/i,
           type: 'asset/resource',
         },
-      ]
+      ],
     },
 
     resolve: {
-      extensions: ['.js']
+      extensions: ['.js'],
     },
 
     devtool: isDev ? 'inline-source-map' : undefined,
@@ -69,6 +68,6 @@ module.exports = (env) => {
       open: true,
       historyApiFallback: true,
       hot: true,
-    } : undefined
-  }
-}
+    } : undefined,
+  };
+};
