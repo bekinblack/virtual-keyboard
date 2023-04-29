@@ -1,9 +1,10 @@
 import styles from './key.module.scss';
 import { wides, darks } from './constants';
 
-export default function buidKey(label) {
+export default function buidKey(label, keyId) {
   const key = document.createElement('button');
   key.classList.add(styles.key);
+  key.id = keyId;
 
   if (wides.includes(label)) {
     key.classList.add(styles.wide);
@@ -19,6 +20,16 @@ export default function buidKey(label) {
     key.classList.add(styles.capslock);
   }
 
-  key.innerText = label === 'space' ? '' : label;
+  [key.innerText] = label.split('-r');
+
+  if (keyId === 'id-space') {
+    key.style.color = 'transparent';
+  }
+  if (keyId === 'id-Caps') {
+    key.addEventListener('click', () => {
+      key.classList.toggle(styles.capslock_active);
+    });
+  }
+
   return key;
 }

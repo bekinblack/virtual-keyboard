@@ -1,3 +1,4 @@
 import App from './app/app';
 
-App.run();
+const app = new App();
+app.run();

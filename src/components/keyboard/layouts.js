@@ -5,7 +5,7 @@ export default {
       'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\', 'Del',
       'Caps', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\'', 'Enter',
       'Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '▲', 'Shift-r',
-      'Crtl', 'Win', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Crtl-r',
+      'Ctrl', 'Lang', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Ctrl-r',
     ],
 
     capslocked: [
@@ -13,7 +13,7 @@ export default {
       'Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '\\', 'Del',
       'Caps', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', '\'', 'Enter',
       'Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', '▲', 'Shift-r',
-      'Crtl', 'Win', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Crtl-r',
+      'Ctrl', 'Lang', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Ctrl-r',
     ],
 
     shifted: [
@@ -21,7 +21,7 @@ export default {
       'Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{', '}', '|', 'Del',
       'Caps', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':', '"', 'Enter',
       'Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?', '▲', 'Shift-r',
-      'Crtl', 'Win', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Crtl-r',
+      'Ctrl', 'Lang', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Ctrl-r',
     ],
 
     shifted_capslocked: [
@@ -29,7 +29,7 @@ export default {
       'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '{', '}', '|', 'Del',
       'Caps', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ':', '"', 'Enter',
       'Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '<', '>', '?', '▲', 'Shift-r',
-      'Crtl', 'Win', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Crtl-r',
+      'Ctrl', 'Lang', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Ctrl-r',
     ],
   },
 
@@ -39,7 +39,7 @@ export default {
       'Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'Del',
       'Caps', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter',
       'Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.', '▲', 'Shift-r',
-      'Crtl', 'Win', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Crtl-r',
+      'Ctrl', 'Lang', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Ctrl-r',
     ],
 
     capslocked: [
@@ -47,7 +47,7 @@ export default {
       'Tab', 'Й', 'Ц', 'У', 'К', 'Е', 'Н', 'Г', 'Ш', 'Щ', 'З', 'Х', 'Ъ', '\\', 'Del',
       'Caps', 'Ф', 'Ы', 'В', 'А', 'П', 'Р', 'О', 'Л', 'Д', 'Ж', 'Э', 'Enter',
       'Shift', 'Я', 'Ч', 'С', 'М', 'И', 'Т', 'Ь', 'Б', 'Ю', '.', '▲', 'Shift-r',
-      'Crtl', 'Win', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Crtl-r',
+      'Ctrl', 'Lang', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Ctrl-r',
     ],
 
     shifted: [
@@ -55,7 +55,7 @@ export default {
       'Tab', 'Й', 'Ц', 'У', 'К', 'Е', 'Н', 'Г', 'Ш', 'Щ', 'З', 'Х', 'Ъ', '/', 'Del',
       'Caps', 'Ф', 'Ы', 'В', 'А', 'П', 'Р', 'О', 'Л', 'Д', 'Ж', 'Э', 'Enter',
       'Shift', 'Я', 'Ч', 'С', 'М', 'И', 'Т', 'Ь', 'Б', 'Ю', ',', '▲', 'Shift-r',
-      'Crtl', 'Win', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Crtl-r',
+      'Ctrl', 'Lang', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Ctrl-r',
     ],
 
     shifted_capslocked: [
@@ -63,7 +63,7 @@ export default {
       'Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '/', 'Del',
       'Caps', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter',
       'Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', ',', '▲', 'Shift-r',
-      'Crtl', 'Win', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Crtl-r',
+      'Ctrl', 'Lang', 'Alt', 'space', 'Alt-r', '◄', '▼', '►', 'Ctrl-r',
     ],
   },
 };
