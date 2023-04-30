@@ -11,6 +11,9 @@ export default function rootReducer(state, action) {
     case 'MOUSE_CLICK':
       return mouseClickReducer(state, action.payload);
 
+    case 'TEXTAREA_CLICK':
+      return { ...state, cursorPosition: action.payload };
+
     default:
       return state;
   }
