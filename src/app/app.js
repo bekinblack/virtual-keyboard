@@ -17,7 +17,7 @@ export default class App {
   run() {
     const { body } = document;
     body.innerHTML = '';
-    body.append(buidTitle('Virtual Keyboard'));
+    body.append(buidTitle(this.store));
     body.append(buidTextarea(this.store));
     body.append(buidKeyboard(this.store));
   }
