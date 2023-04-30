@@ -54,3 +54,10 @@
 .capslock_active::after {
   background-color: $capslock-active-after-color;
 }
+
+.active {
+  background-color: $key-active-bg-color;
+  border-radius: 25px;
+  box-shadow: none;
+  top: 1px;
+}

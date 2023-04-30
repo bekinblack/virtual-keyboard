@@ -1,6 +1,6 @@
 import buildKey from '../key/key';
 import styles from './keyboard.module.scss';
-import layouts from './layouts';
+import layouts from './constants/layouts';
 import getLayout from './utils/get-layout';
 import changeKeyboard from './change-keyboard';
 import keyIds from './utils/getKeyIds';

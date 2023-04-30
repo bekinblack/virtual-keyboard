@@ -22,14 +22,30 @@ export default function buildKey(label, keyId) {
 
   [key.innerText] = label.split('-r');
 
-  if (keyId === 'id-space') {
+  if (keyId === 'Space') {
     key.style.color = 'transparent';
   }
-  if (keyId === 'id-Caps') {
+  if (keyId === 'CapsLock') {
     key.addEventListener('click', () => {
       key.classList.toggle(styles.capslock_active);
     });
   }
+
+  document.body.addEventListener('keydown', (event) => {
+    if (event.code === key.id) {
+      key.classList.add(styles.active);
+    }
+  });
+
+  document.body.addEventListener('keyup', (event) => {
+    if (event.code === key.id) {
+      key.classList.remove(styles.active);
+    }
+
+    if (event.code === 'CapsLock') {
+      key.classList.toggle(styles.capslock_active);
+    }
+  });
 
   return key;
 }

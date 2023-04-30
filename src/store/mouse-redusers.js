@@ -16,32 +16,8 @@ export function mouseDownReducer(state, payload) {
   switch (payload) {
     case 'Shift':
       return { ...state, shift: true };
-
-    default:
-      return state;
-  }
-}
-
-export function mouseUpReducer(state, payload) {
-  switch (payload) {
-    default:
-      return { ...state, shift: false };
-  }
-}
-
-export function mouseClickReducer(state, payload) {
-  switch (payload) {
-    case 'Shift':
-      return { ...state, shift: false };
-
     case 'Caps':
-      return { ...state, capslock: !state.capslock };
-
-    case 'Backspace':
-      return backspaceHandler(state);
-
-    case 'Del':
-      return deleteHandler(state);
+      return state;
 
     case '◄':
       return arrowLeftHandler(state);
@@ -55,11 +31,17 @@ export function mouseClickReducer(state, payload) {
     case '▼':
       return arrowDownHandler(state);
 
-    case 'space':
-      return spaceHandler(state);
-
     case 'Enter':
       return enterHandler(state);
+
+    case 'Backspace':
+      return backspaceHandler(state);
+
+    case 'Del':
+      return deleteHandler(state);
+
+    case 'space':
+      return spaceHandler(state);
 
     case 'Tab':
       return tabHandler(state);
@@ -71,9 +53,25 @@ export function mouseClickReducer(state, payload) {
       return state;
 
     case 'Lang':
-      return changeLang(state);
+      return state;
 
     default:
       return addCharacter(state, payload);
+  }
+}
+
+export function mouseUpReducer(state, payload) {
+  switch (payload) {
+    case 'Caps':
+      return { ...state, capslock: !state.capslock };
+
+    case 'Shift':
+      return { ...state, shift: false };
+
+    case 'Lang':
+      return changeLang(state);
+
+    default:
+      return { ...state };
   }
 }

@@ -1,4 +1,4 @@
-import { mouseUpReducer, mouseDownReducer, mouseClickReducer } from './mouse-redusers';
+import { mouseUpReducer, mouseDownReducer } from './mouse-redusers';
 
 export default function rootReducer(state, action) {
   switch (action.type) {
@@ -7,9 +7,6 @@ export default function rootReducer(state, action) {
 
     case 'MOUSE_UP':
       return mouseUpReducer(state, action.payload);
-
-    case 'MOUSE_CLICK':
-      return mouseClickReducer(state, action.payload);
 
     case 'TEXTAREA_CLICK':
       return { ...state, cursorPosition: action.payload };

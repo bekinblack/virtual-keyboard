@@ -1,4 +1,4 @@
-import layouts from './layouts';
+import layouts from './constants/layouts';
 import getLayout from './utils/get-layout';
 import keyIds from './utils/getKeyIds';
 

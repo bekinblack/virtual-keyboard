@@ -22,5 +22,21 @@ export default class App {
     body.append(buildTextarea(this.store));
     body.append(buildKeyboard(this.store));
     body.append(buildHint(this.store));
+
+    body.addEventListener('keydown', (event) => {
+      const key = document.getElementById(event.code);
+      if (key) {
+        event.preventDefault();
+        this.store.dispatch({ type: 'MOUSE_DOWN', payload: key.innerText });
+      }
+    });
+
+    body.addEventListener('keyup', (event) => {
+      const key = document.getElementById(event.code);
+      if (key) {
+        event.preventDefault();
+        this.store.dispatch({ type: 'MOUSE_UP', payload: key.innerText });
+      }
+    });
   }
 }
