@@ -7,7 +7,7 @@ function setLang(lang) {
     : hintText.eng;
 }
 
-export default function buidHint(store) {
+export default function buildHint(store) {
   const { lang } = store.getState();
   const hint = document.createElement('h4');
   hint.classList.add(styles.hint);

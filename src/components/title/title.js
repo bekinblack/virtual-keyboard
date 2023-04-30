@@ -6,7 +6,7 @@ function setLang(lang) {
     : 'Virtual Keyboard';
 }
 
-export default function buidTitle(store) {
+export default function buildTitle(store) {
   const { lang } = store.getState();
   const title = document.createElement('h1');
   title.classList.add(styles.title);

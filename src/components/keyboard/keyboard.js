@@ -1,11 +1,11 @@
-import buidKey from '../key/key';
+import buildKey from '../key/key';
 import styles from './keyboard.module.scss';
 import layouts from './layouts';
 import getLayout from './utils/get-layout';
 import changeKeyboard from './change-keyboard';
 import keyIds from './utils/getKeyIds';
 
-export default function buidKeyboard(store) {
+export default function buildKeyboard(store) {
   const keyboard = document.createElement('div');
   keyboard.classList.add(styles.keyboard);
 
@@ -14,7 +14,7 @@ export default function buidKeyboard(store) {
   const keys = layouts[lang][layout];
 
   keys.forEach((key, index) => {
-    const button = buidKey(key, keyIds[index]);
+    const button = buildKey(key, keyIds[index]);
 
     button.addEventListener(
       'mousedown',

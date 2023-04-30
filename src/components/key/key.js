@@ -1,7 +1,7 @@
 import styles from './key.module.scss';
 import { wides, darks } from './constants';
 
-export default function buidKey(label, keyId) {
+export default function buildKey(label, keyId) {
   const key = document.createElement('button');
   key.classList.add(styles.key);
   key.id = keyId;

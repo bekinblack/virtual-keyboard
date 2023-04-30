@@ -1,10 +1,10 @@
 import './app.scss';
-import buidTitle from '../components/title/title';
-import buidTextarea from '../components/textarea/textarea';
-import buidKeyboard from '../components/keyboard/keyboard';
+import buildTitle from '../components/title/title';
+import buildTextarea from '../components/textarea/textarea';
+import buildKeyboard from '../components/keyboard/keyboard';
 import createStore from '../store/create-store';
 import rootReducer from '../store/root-reducer';
-import buidHint from '../components/hint/hint';
+import buildHint from '../components/hint/hint';
 
 export default class App {
   store = createStore(rootReducer, {
@@ -18,9 +18,9 @@ export default class App {
   run() {
     const { body } = document;
     body.innerHTML = '';
-    body.append(buidTitle(this.store));
-    body.append(buidTextarea(this.store));
-    body.append(buidKeyboard(this.store));
-    body.append(buidHint(this.store));
+    body.append(buildTitle(this.store));
+    body.append(buildTextarea(this.store));
+    body.append(buildKeyboard(this.store));
+    body.append(buildHint(this.store));
   }
 }

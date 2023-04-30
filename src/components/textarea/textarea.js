@@ -1,6 +1,6 @@
 import styles from './textarea.module.scss';
 
-export default function buidTextarea(store) {
+export default function buildTextarea(store) {
   const textarea = document.createElement('textarea');
   textarea.classList.add(styles.textarea);
   textarea.autofocus = true;
