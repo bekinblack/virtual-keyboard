@@ -30,7 +30,9 @@ export default class App {
       const key = document.getElementById(event.code);
       if (key) {
         event.preventDefault();
-        this.store.dispatch({ type: 'MOUSE_DOWN', payload: key.innerText });
+        if (key.id === 'AltRight') {
+          this.store.dispatch({ type: '__IGNORE__' });
+        } else { this.store.dispatch({ type: 'MOUSE_DOWN', payload: key.innerText }); }
       }
     });
 

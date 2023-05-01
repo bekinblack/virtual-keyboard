@@ -32,6 +32,11 @@ export default function buildKey(label, keyId) {
   }
 
   document.body.addEventListener('keydown', (event) => {
+    if (event.code === 'AltRight') {
+      const leftControl = document.getElementById('ControlLeft');
+      leftControl.classList.remove(styles.active);
+    }
+
     if (event.code === key.id) {
       key.classList.add(styles.active);
     }
