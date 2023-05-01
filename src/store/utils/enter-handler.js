@@ -7,5 +7,6 @@ export default function enterHandler(state) {
     ...state,
     textareaContent: newContent,
     cursorPosition: cursorPosition + 1,
+    lineLength: 0,
   };
 }

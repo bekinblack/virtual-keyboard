@@ -13,6 +13,7 @@ export default class App {
     capslock: false,
     textareaContent: '',
     cursorPosition: 0,
+    lineLength: 0,
   });
 
   run() {
