@@ -53,7 +53,7 @@ export function mouseDownReducer(state, payload) {
     case 'Alt':
       return { ...state, alt: true };
 
-    case 'Lang':
+    case '🌐':
       return state;
 
     default:
@@ -69,7 +69,7 @@ export function mouseUpReducer(state, payload) {
     case 'Shift':
       return { ...state, shift: false };
 
-    case 'Lang':
+    case '🌐':
       return changeLang(state);
 
     case 'Ctrl':

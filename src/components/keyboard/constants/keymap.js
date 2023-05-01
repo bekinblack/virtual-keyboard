@@ -55,7 +55,7 @@ export default [
   'ArrowUp',
   'ShiftRight',
   'ControlLeft',
-  'Lang',
+  '🌐',
   'AltLeft',
   'Space',
   'AltRight',

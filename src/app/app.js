@@ -8,7 +8,7 @@ import buildHint from '../components/hint/hint';
 
 export default class App {
   store = createStore(rootReducer, {
-    lang: localStorage.getItem('lang') || 'english',
+    lang: localStorage.getItem('🌐') || 'english',
     shift: false,
     capslock: false,
     control: false,
@@ -36,7 +36,7 @@ export default class App {
   keyUpHandler = (event) => {
     const { alt, control } = this.store.getState();
     if (alt && control) {
-      this.store.dispatch({ type: 'MOUSE_UP', payload: 'Lang' });
+      this.store.dispatch({ type: 'MOUSE_UP', payload: '🌐' });
     }
 
     const key = document.getElementById(event.code);

@@ -1,6 +1,6 @@
 export const darks = [
   'Tab', 'Enter', 'Shift', 'Caps', 'Shift-r',
-  'space', 'Lang', 'Backspace', 'Del', 'Ctrl',
+  'space', '🌐', 'Backspace', 'Del', 'Ctrl',
   'Alt', 'Ctrl-r', 'Alt-r', '◄', '▼', '►', '▲',
 ];
 
