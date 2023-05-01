@@ -50,6 +50,10 @@ export default function buildKey(label, keyId) {
     if (event.code === 'CapsLock') {
       key.classList.toggle(styles.capslock_active);
     }
+
+    if (event.code.includes('Shift')) {
+      key.classList.remove(styles.active);
+    }
   });
 
   return key;

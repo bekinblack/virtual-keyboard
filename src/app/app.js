@@ -18,6 +18,34 @@ export default class App {
     lineLength: 0,
   });
 
+  keyDownHandler = (event) => {
+    const { shift } = this.store.getState();
+    const key = document.getElementById(event.code);
+    if (key) {
+      event.preventDefault();
+      if (key.id === 'AltRight') {
+        /* ignore shift if already down */
+      } else if (key.id.includes('Shift') && shift) {
+        /* ignore shift if already down */
+      } else {
+        this.store.dispatch({ type: 'MOUSE_DOWN', payload: key.innerText });
+      }
+    }
+  };
+
+  keyUpHandler = (event) => {
+    const { alt, control } = this.store.getState();
+    if (alt && control) {
+      this.store.dispatch({ type: 'MOUSE_UP', payload: 'Lang' });
+    }
+
+    const key = document.getElementById(event.code);
+    if (key) {
+      event.preventDefault();
+      this.store.dispatch({ type: 'MOUSE_UP', payload: key.innerText });
+    }
+  };
+
   run() {
     const { body } = document;
     body.innerHTML = '';
@@ -25,28 +53,7 @@ export default class App {
     body.append(buildTextarea(this.store));
     body.append(buildKeyboard(this.store));
     body.append(buildHint(this.store));
-
-    body.addEventListener('keydown', (event) => {
-      const key = document.getElementById(event.code);
-      if (key) {
-        event.preventDefault();
-        if (key.id === 'AltRight') {
-          this.store.dispatch({ type: '__IGNORE__' });
-        } else { this.store.dispatch({ type: 'MOUSE_DOWN', payload: key.innerText }); }
-      }
-    });
-
-    body.addEventListener('keyup', (event) => {
-      const { alt, control } = this.store.getState();
-      if (alt && control) {
-        this.store.dispatch({ type: 'MOUSE_UP', payload: 'Lang' });
-      }
-
-      const key = document.getElementById(event.code);
-      if (key) {
-        event.preventDefault();
-        this.store.dispatch({ type: 'MOUSE_UP', payload: key.innerText });
-      }
-    });
+    body.addEventListener('keydown', this.keyDownHandler);
+    body.addEventListener('keyup', this.keyUpHandler);
   }
 }
