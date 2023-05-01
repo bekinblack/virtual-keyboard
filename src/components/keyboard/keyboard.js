@@ -27,14 +27,6 @@ export default function buildKeyboard(store) {
     );
 
     button.addEventListener(
-      'click',
-      (event) => store.dispatch({
-        type: 'MOUSE_CLICK',
-        payload: event.target.innerText,
-      }),
-    );
-
-    button.addEventListener(
       'mouseup',
       (event) => store.dispatch({
         type: 'MOUSE_UP',
@@ -47,7 +39,6 @@ export default function buildKeyboard(store) {
 
   store.subscribe(() => {
     const newState = store.getState();
-    // console.log(newState);
 
     if (!(lang === newState.lang
       && newState.capslock === capslock

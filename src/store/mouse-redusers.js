@@ -16,6 +16,7 @@ export function mouseDownReducer(state, payload) {
   switch (payload) {
     case 'Shift':
       return { ...state, shift: true };
+
     case 'Caps':
       return state;
 
@@ -47,10 +48,10 @@ export function mouseDownReducer(state, payload) {
       return tabHandler(state);
 
     case 'Ctrl':
-      return state;
+      return { ...state, control: true };
 
     case 'Alt':
-      return state;
+      return { ...state, alt: true };
 
     case 'Lang':
       return state;
@@ -70,6 +71,12 @@ export function mouseUpReducer(state, payload) {
 
     case 'Lang':
       return changeLang(state);
+
+    case 'Ctrl':
+      return { ...state, control: false };
+
+    case 'Alt':
+      return { ...state, alt: false };
 
     default:
       return { ...state };

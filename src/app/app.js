@@ -11,6 +11,8 @@ export default class App {
     lang: localStorage.getItem('lang') || 'english',
     shift: false,
     capslock: false,
+    control: false,
+    alt: false,
     textareaContent: '',
     cursorPosition: 0,
     lineLength: 0,
@@ -33,6 +35,11 @@ export default class App {
     });
 
     body.addEventListener('keyup', (event) => {
+      const { alt, control } = this.store.getState();
+      if (alt && control) {
+        this.store.dispatch({ type: 'MOUSE_UP', payload: 'Lang' });
+      }
+
       const key = document.getElementById(event.code);
       if (key) {
         event.preventDefault();
