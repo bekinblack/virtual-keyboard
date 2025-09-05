@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+.textarea {
+  display: block;
+  margin: 0 auto;
+  width: 884px;
+  height: 420px;
+  resize: none;
+  border: 3px solid $main-color;
+  border-radius: 8px;
+  background-color: $textarea-bg-color;
+  padding: 8px;
+  margin-bottom: 8px;
+  font-size: xx-large;
+}
